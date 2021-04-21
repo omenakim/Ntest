@@ -1,0 +1,34 @@
+@startuml
+
+title
+Crossing Yard
+
+end title
+
+left to right direction
+
+actor "TCS" as  TCS
+actor "Train Crossing Coordinator" as TrainCrossingCoordinator
+actor "Train Driver" as  TrainDriver
+actor "Yard Manager" as  YardManager
+actor "Train" as  Train
+
+(Report key performance indicators monthly)
+(Calculate optimal train movements for minimize crossing time )
+(Generate task list)
+(Perform movement)
+(Monitor progress in locus)
+(Dispatch the task list)
+
+:YardManager: -> (Report key performance indicators monthly)
+:TCS: -> (Calculate optimal train movements for minimize crossing time )
+:TCS: -> (Generate task list)
+:TrainDriver: -> (Apply list movements)
+:Train Crossing Coordinator: -> (Monitor progress in locus)
+:Train Crossing Coordinator: -> (Dispatch the task list)
+:Train Driver: -> (Perform movement)
+
+@enduml
+
+
+

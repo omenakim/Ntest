@@ -1,0 +1,29 @@
+@startuml
+
+class TCS{
+    String descricao
+}
+
+class YardManager{
+    String titulo
+}
+class TrainCrossingCoordinator{
+    String titulo
+
+}
+
+class TrainDriver{
+    String titulo
+    List<taskList>
+}
+
+
+
+TCS "1" --* "N" YardManager
+TCS "1" --* "N" TrainCrossingCoordinator
+YardManager -- TrainCrossingCoordinator
+TCS "1" --* "N" TrainDriver
+YardManager  --  TrainDriver
+TrainDriver *--* Train
+
+@enduml
